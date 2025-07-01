@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   View
 } from 'react-native';
+
 import { Item } from '../types/todo';
 import PrimaryButton from './Button';
 import TodoItem from './TodoItem';
@@ -16,12 +17,8 @@ export default function HomePage() {
   const [text, setText] = useState("");
   const [todos, setTodos] = useState<Item[]>([])
 
-  const addTodo = () => {
-    if (text.trim()) {
-      setTodos([...todos, { item: text.trim() }])
-      setText("")
-    }
-  }
+
+  
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -38,7 +35,7 @@ export default function HomePage() {
           className="font-mono w-[400] border border-gray-400 rounded-md p-3 m-5"
         />
 
-        <PrimaryButton onPress={addTodo} title='Add'/>
+        <PrimaryButton onPress={addTodo} title='Add' />
 
         <View className="flex-1 w-full p-5">
           <FlatList

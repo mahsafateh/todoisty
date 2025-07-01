@@ -1,8 +1,7 @@
 import { Props } from "@/types/todo"
 import { View, Text } from "react-native"
 
-
-export default function TodoItem({todoItem, index} : Props) {
+export default function TodoItem({todoItem, index}: Props) {
     return (
         <View
             className="p-1 m-1 "
